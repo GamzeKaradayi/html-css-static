@@ -19,3 +19,7 @@
 #### Branch : "steps/step_4_home"
 ##### Ana Ekranımızı tamamlıyoruz!
 ###### Bu sayfada elementleri CSS aracılığıyla nasıl şekillendirdiğimizi daha iyi anlayacağız.
+
+#### Branch : "steps/step_5_roulette"
+##### Uygulamamızı tamamlıyoruz!
+###### Rulet sayfamızda ihale kime kalacak, görelim!
