@@ -1,15 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head>	
+	<!-- "Meta viewport" olarak adlandırılan bu satır, sayfamızın maksimum genişliğini, ziyaret edilen cihazın genişliğine sabitler.
+	Böylelikle sayfamız "responsive" olarak bilinen, tüm cihazlara uyumluluk kriterini yerine getirebilir şekilde davranmaya başlar.
+	-->
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Giriş</title>
-	<meta charset="utf8" />
-	<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
-	<link rel="stylesheet" href="assets/css/style.css">
-	<link rel="stylesheet" href="assets/css/index.css">
-</head>
 
+	<!-- "Title" ile sayfamızın başlığını belirtiriz. Tarayıcı sekmesinde yazan yazıyı, buradan ayarlarız.-->
+	<title>Giriş</title>
+
+	<!-- Unicode Transformation Format (UTF8) karakter kodlaması standardıdır. --> 
+	<meta charset="utf8" />
+
+	<!-- Google Fonts, bir çok modern font türünü barındıran bir hizmettir. Biz burada "Ubuntu" isimli font'u çağırıyoruz. -->	
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+
+	<!-- Her 3 sayfa için de geçerli olacak CSS kurallarımızı style.css içerisinde tanımlıyoruz. -->	
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<!-- index.css içerisinde ise, sadece bu sayfada kullanacağımız kodlarımızı tutuyoruz. -->
+	<link rel="stylesheet" href="assets/css/index.css">
+
+</head>
 <body>
+	
+	<!-- İlk sayfamızdan selamlar!! 
+	HTML kodları arasına bu şekilde yorum (comment) yazabilirsiniz.!
+	-->
+
+	<div class="login-page">
+		
+		<!-- Sayfa başlığımız burada tanımlanıyor. -->
+		<div class="title">
+			<div class="bold">öğrenci</div>
+			<div>evi</div>
+		</div>
+		<!-- /// -->
+
+		<!-- Sayfa alt başlığımız -->		
+		<div class="sub-title">
+			ev idaresi uygulaması
+		</div>
+		<!-- /// -->
+		
+		<!-- Form aracılığıyla home.html sayfasına bilgileri gönderiyoruz. -->
+		<form action="home.html" class="login-form">
+			<input class="common-input" type="text" placeholder="Ad">
+			<input class="common-input" type="text" placeholder="Soyad">
+			<select class="common-input">
+				<option selected disabled>Ev Seçiniz</option>
+				<option>Ev 1</option>
+				<option>Ev 2</option>
+				<option>Ev 3</option>
+				<option>Ev 4</option>
+				<option>Ev 5</option>
+			</select>
+			<div class="login-button-container">
+				<button class="login-button" type="submit">GİRİŞ</button>
+			</div>
+		</form>		
+		<!-- /// -->
+
+	</div>
+
 
 </body>
 </html>
