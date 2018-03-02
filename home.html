@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Ana Sayfa</title>
@@ -8,7 +9,58 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/home.css">
 </head>
+
 <body>
-	
+
+	<div class="page-container">
+
+		<div class="mobile-header">
+			<a class="title" href="home.html">
+				<div class="bold">öğrenci</div>
+				<div>evi</div>
+			</a>
+			<div class="welcome-text">
+				Hoşgeldiniz&nbsp;
+				<span class="bold">{{username}}</span>!
+			</div>
+		</div>
+
+
+		<div class="navigation-links">
+
+			<div class="title-and-welcome-text">
+				<a class="title" href="home.html">
+					<div class="bold">öğrenci</div>
+					<div>evi</div>
+				</a>
+				<div class="welcome-text">
+					Hoşgeldiniz&nbsp;
+					<span class="bold">{{username}}</span>!
+				</div>
+			</div>
+
+			<div class="navigation-links-inner">
+				<a class="navigation-link home-link active" href="home.html">
+					<div class="icon"></div>
+					<div class="label">Ana Sayfa</div>
+				</a>
+				<a class="navigation-link roulette-link" href="roulette.html">
+					<div class="icon"></div>
+					<div class="label">İş Ruleti</div>
+				</a>
+				<a class="navigation-link logout-link" href="index.html">
+					<div class="icon"></div>
+					<div class="label">Çıkış</div>
+				</a>
+			</div>
+
+		</div>
+		<div class="page-content">
+			Hello from HOME!
+		</div>
+		
+	</div>
+
 </body>
+
 </html>
