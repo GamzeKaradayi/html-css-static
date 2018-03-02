@@ -1,3 +1,20 @@
+.page-container .page-content .title-with-lines {
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.page-container .page-content .title-with-lines .line {
+	height: 1px;
+	background-color: #ececec;
+	flex: 1;
+}
+
+.page-container .page-content .title-with-lines .title {
+	margin-left: 10px;
+	margin-right: 10px;
+}
 
 .page-container .page-content .people-table {
 	width: 100%;
