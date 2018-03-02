@@ -57,10 +57,122 @@
 		</div>
 
 		<div class="page-content">
-			Hello from ROULETTE!
+			<div class="title-with-lines">
+				<div class="line"></div>
+				<div class="title bold">İş Seçiniz</div>
+				<div class="line"></div>
+			</div>
+			<div class="job-list">
+				<div class="job-container">
+					<div class="job-item">Bulaşık Yıkama</div>
+				</div>
+				<div class="job-container">
+					<div class="job-item">Markete Gitme</div>
+				</div>
+				<div class="job-container selected">
+					<div class="job-item">Tavuk Döner Alıp Gelme</div>
+				</div>
+				<div class="job-container">
+					<div class="job-item">Pizza Ismarlama</div>
+				</div>
+				<div class="job-container">
+					<div class="job-item">Ekmek Alma</div>
+				</div>
+				<div class="job-container">
+					<div class="job-item">Temizlik</div>
+				</div>
+			</div>
+			<div class="title-with-lines">
+				<div class="line"></div>
+				<div class="title bold">Ruleti Başlat</div>
+				<div class="line"></div>
+			</div>
+			<div class="roulette-container">
+				<div id="roulette"></div>
+				<div class="pointer"></div>
+			</div>
+			<button class="start-roulette" onclick="javascript:StartRoulette()">Başlat</button>
 		</div>
-		
+
 	</div>
+
+	<script>
+			var Users = [
+				{
+					name : "Cengizhan",
+					surname : "Peker",
+					home : "Ev1"
+				},
+				{
+					name : "Eray",
+					surname : "Alakese",
+					home : "Ev1"
+				},
+				{
+					name : "Yusuf",
+					surname : "Güldoğan",
+					home : "Ev1"
+				},
+				{
+					name : "Kartal",
+					surname : "Erkoç",
+					home : "Ev1"
+				},
+				{
+					name : "Pelin",
+					surname : "Erdem",
+					home : "Ev1"
+				},
+				{
+					name : "Cüneyt",
+					surname : "Dansuk",
+					home : "Ev1"
+				}
+			]
+	
+			var Roulette = document.getElementById("roulette");
+			
+			var Iteration = 10;		
+			for(let i = 0; i < Iteration; i++) {
+	
+				Users.forEach(function(User, index) {
+					Roulette.innerHTML += "<div class='user'>"+ User.name +" "+ User.surname +"</div>";
+				});
+	
+			}
+	
+			function StartRoulette() {
+	
+				var Decisions = {
+					Iteration : GetRandomNumberByRange(1, Iteration),
+					User : GetRandomNumberByRange(0, Users.length)
+				};
+			
+				var Selected = {
+					Item : (Decisions.Iteration * Users.length) + Decisions.User,
+					User : Users[Decisions.User]
+				}
+	
+	
+				Roulette.classList.remove("reset");
+				Roulette.classList.add("active");
+				
+				Roulette.style.marginTop = -1 * 60 * Selected.Item + 120 + "px";
+				
+				setTimeout(function() {
+					alert("İhale " + Selected.User.name + " " + Selected.User.surname + " adlı kişiye kalmıştır.");
+					Roulette.classList.remove("active");
+					Roulette.classList.add("reset");
+					Roulette.removeAttribute("style");
+				},6500);
+	
+			}
+	
+			function GetRandomNumberByRange(min, max) {
+				return parseInt(Math.random() * (max - min) + min);
+			}
+	
+		</script>
 
 </body>
 
